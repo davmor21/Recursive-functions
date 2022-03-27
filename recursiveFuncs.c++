@@ -20,6 +20,7 @@ int gcd(int x, int y) // Greatest Common Denominator
     }
     return gcd(x, y-x);
 }
+
 void binaryConverter(int num) { // converts an integer into its binary equivalent
     
    if(num == 1){
@@ -29,4 +30,17 @@ void binaryConverter(int num) { // converts an integer into its binary equivalen
     binaryConverter(num/2);
     cout << num%2;
    }
+}
+
+int RaiseToPower(int baseVal, int exponentVal){ // recursive exponential function
+   int resultVal;
+
+   if (exponentVal == 0) {
+      resultVal = 1;
+   }
+   else {
+      resultVal = baseVal * RaiseToPower(baseVal, exponentVal-1);
+   }
+
+   return resultVal;
 }
