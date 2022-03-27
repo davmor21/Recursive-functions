@@ -44,3 +44,17 @@ int RaiseToPower(int baseVal, int exponentVal){ // recursive exponential functio
 
    return resultVal;
 }
+
+int Fibonacci(int n) { // recursive fibonacci sequence that takes in an int, and returns the fibonacci value that would occupy that binary location
+  
+   if(n < 0){
+    return -1;  
+   }
+   else if (n <= 1){
+        return n;
+   }
+    else{
+       return Fibonacci(n-1) + Fibonacci(n-2);
+    }
+      
+}
