@@ -20,3 +20,13 @@ int gcd(int x, int y) // Greatest Common Denominator
     }
     return gcd(x, y-x);
 }
+void binaryConverter(int num) { // converts an integer into its binary equivalent
+    
+   if(num == 1){
+   cout << num;
+   }
+   else{
+    binaryConverter(num/2);
+    cout << num%2;
+   }
+}
