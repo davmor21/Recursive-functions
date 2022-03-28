@@ -58,3 +58,20 @@ int Fibonacci(int n) { // recursive fibonacci sequence that takes in an int, and
     }
       
 }
+
+void printNumPattern(int n1, int n2){ // user inputs a number(n1) and a number to subtract from n1 (n2), and the function prints the pattern from n1 until 0 or a negative value, and then adds n2 until n1 is reached 
+   int baseVal = n1;
+     cout << n1 << " ";
+        if(n1 <= 0){
+           if (n1 == baseVal){
+               return;
+         }
+           else{
+           printNumPattern(n1 + n2, n2);
+         }
+        }
+        else{
+         printNumPattern(n1 - n2, n2);
+         cout << n1 << " ";
+         }
+} 
