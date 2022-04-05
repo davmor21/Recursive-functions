@@ -75,3 +75,21 @@ void printNumPattern(int n1, int n2){ // user inputs a number(n1) and a number t
          cout << n1 << " ";
          }
 } 
+void pattern(int n, int i) { // takes in # of spaces(n) and number of stars(i) and creates a fractal based on that
+   
+    if(i == 0){
+       return;
+    }
+
+   pattern(n, i/2);                            
+
+   for ( int k = 0; k < n  ; k++ ) {
+      cout << " ";
+   }
+   for( int k = 0; k < i; k++ ){
+      cout << "* ";        
+   }
+   cout << endl;
+
+   pattern(n+ i, i/2); 
+}
